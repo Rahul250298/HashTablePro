@@ -31,8 +31,7 @@ namespace HashTable
         /// <returns></returns>
         protected int GetArrayPosition(K key)
         {
-            int hash = key.GetHashCode();
-            int position = hash % size;
+            int position = key.GetHashCode() % size;
             return Math.Abs(position);
         }
         /// <summary>
@@ -154,4 +153,5 @@ namespace HashTable
         }
     }
 }
+
 
